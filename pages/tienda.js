@@ -31,13 +31,13 @@ export default function Tienda({ guitarras }) {
 // }
 
 /** con getServerSideProps obtenemos la informacion mas nueva posible si actualizamos la api se actualiza la info*/
-// export async function getServerSideProps() {
-//   const respuesta = await fetch(
-//     `${process.env.API_URL}/guitarras?populate=imagen`
-//   );
-//   const { data: guitarras } = await respuesta.json();
+export async function getServerSideProps() {
+  const respuesta = await fetch(
+    `${process.env.API_URL}/guitarras?populate=imagen`
+  );
+  const { data: guitarras } = await respuesta.json();
 
-//   return {
-//     props: { guitarras },
-//   };
-// }
+  return {
+    props: { guitarras },
+  };
+}

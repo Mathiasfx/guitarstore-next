@@ -36,6 +36,14 @@ export default function Header() {
           >
             Blog
           </Link>
+          <Link href="/carrito">
+            <Image
+              src="/img/carrito.png"
+              alt="Carrito"
+              width={30}
+              height={30}
+            />
+          </Link>
         </nav>
       </div>
     </header>
